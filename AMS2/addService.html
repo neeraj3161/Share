@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add staff</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body style=" background-image: url('blur-back.png');
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;">
+
+    <div class="navbar">
+        <a href="">Home</a>
+      
+        <a href="/AMS/ADMIN/yourServicesPage.php" class="nav-links"  >Your Services</a>
+        <a href="" >Profile</a>
+        <a href="">Logout</a>
+</div>
+
+
+<div class="form-add">
+    
+    <h1 class="info-head add-t">Service form</h1>
+
+    <form action="/AMS/ADMIN/serviceForm.php" style="text-align: center;" method="post">
+            <input name ="vn"class="input" type="text" placeholder="Vehicle number" required><br>
+            <input name="vnn" class="input" type="text" placeholder="Vehicle name" required><br>
+            
+            <label for="">Service type: </label>
+            <input  class="radio" name="servicetype" value="Normal" type="radio"><label for="">Normal</label>
+            <input class="radio" name="servicetype" value="Special" type="radio"><label for="">Special</label><br>
+            <label for="">Vehicle type: </label>
+            <input class="radio" name="wheeler" value="2wheel" type="radio"><label for="">2 wheeler</label>
+            <input class="radio" name="wheeler" value="4wheel" type="radio"><label for="">4 wheeler</label><br>
+            <input name="comments"class="input" type="text" placeholder="Additional comments" required><br>
+
+            <button class="btn" type="reset">Reset form</button>
+            <button class="btn sub" type="submit">Submit</button>
+    </form>
+</div>
+
+
+
+      
+</body>
+</html>
+

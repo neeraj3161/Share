@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration</title>
+  <link rel="stylesheet" href="userRegistration.css">
+
+
+  <script>
+    function verifyData(){
+      var name=document.myform.name.value;  
+      var email=document.myform.email.value;  
+      var psw=document.querySelector("#psw").value;  
+      var pswr = document.querySelector("#psws").value;
+      var ph_no = document.querySelector("#ph_no").value;
+
+
+
+      if(ph_no.length!=10){
+        alert("Enter a valid ph no")
+        return false
+      }
+
+
+      if(psw!=pswr){
+        alert("Password is not matching!!")
+        return false;
+      }
+
+
+      if(psw.length<8){
+        alert("Password should be greater than or equal to 8 characters!!!")
+        return false;
+      }
+     
+
+
+      if(name==""){
+        alert("Please enter a valid name")
+        return false;
+      }else if(email==""){
+        alert("Please enter a valid email")
+        return false;
+      }
+
+
+     
+
+
+    }
+
+
+</script>
+</head>
+<body>
+  <form name="myform" action="/AMS/userRegister.php" method="post" onsubmit=" return verifyData()">
+    <div class="container" style="text-align: center;">
+      <h1 style="text-align: center;">Register</h1>
+      <p style="text-align: center;">Please fill in this form to create an account.</p>
+      <hr>
+<input class="input fname" name="name" type="text" placeholder="Enter full name" required><br>
+<input class="input" name="email" type="email" placeholder="Enter email address" required><br>
+<input class="input" name="phone" type="number" placeholder="Enter phone number" required><br>
+<label for="">Gender: </label>
+<input class="radio" name="gender" value="Male" type="radio"><label for="">Male</label>
+<input class="radio" name="gender" value="Female" type="radio"><label for="">Female</label><br>
+<input name="address" class="input" type="text" placeholder="Enter complete address" required><br>
+<input name="city" class="input c" type="text" placeholder="Enter city name" required>
+<input name="state" class="input s" type="text" placeholder="Enter state name" required><br>
+<input name="pass" class="input pass" type="password" placeholder="create password" required><br>
+            <input name="repass" class="input repass" type="password" placeholder="confirm password"  required><br>
+
+<button class="btn" type="reset">Reset form</button>
+            <button class="btn sub" type="submit">Submit</button>
+    </div>
+  
+  
+  </form>
+
+  
+</body>
+</html>
